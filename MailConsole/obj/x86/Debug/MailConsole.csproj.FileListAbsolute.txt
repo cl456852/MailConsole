@@ -10,3 +10,9 @@ D:\document\new\code\MailConsole\MailConsole\obj\x86\Debug\MailConsole.pdb
 D:\document\new\code\MailConsole\MailConsole\bin\Debug\MailConsole.exe
 D:\document\new\code\MailConsole\MailConsole\bin\Debug\MailConsole.pdb
 D:\document\new\code\MailConsole\MailConsole\obj\x86\Debug\MailConsole.csprojResolveAssemblyReference.cache
+C:\code\MailConsole\MailConsole\bin\Debug\MailConsole.exe.config
+C:\code\MailConsole\MailConsole\obj\x86\Debug\MailConsole.exe
+C:\code\MailConsole\MailConsole\obj\x86\Debug\MailConsole.pdb
+C:\code\MailConsole\MailConsole\bin\Debug\MailConsole.exe
+C:\code\MailConsole\MailConsole\bin\Debug\MailConsole.pdb
+C:\code\MailConsole\MailConsole\obj\x86\Debug\MailConsole.csprojResolveAssemblyReference.cache
