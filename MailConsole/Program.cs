@@ -65,13 +65,13 @@ namespace MailConsole
             string tempip = "";
             try
             {
-                WebRequest wr = WebRequest.Create("http://1111.ip138.com/ic.asp");
+                WebRequest wr = WebRequest.Create("http://www.ip.cn");
                 Stream s = wr.GetResponse().GetResponseStream();
                 StreamReader sr = new StreamReader(s, Encoding.Default);
                 string all = sr.ReadToEnd(); //读取网站的数据
 
-                int start = all.IndexOf("[") + 1;
-                int end = all.IndexOf("]", start);
+                int start = all.IndexOf("?code>") + 1;
+                int end = all.IndexOf("</code>", start);
                 tempip = DateTime.Now + "   " + all.Substring(start, end - start);
                 Console.WriteLine(tempip);
                 sr.Close();
