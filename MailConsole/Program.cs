@@ -72,7 +72,7 @@ namespace MailConsole
 
                 int start = all.IndexOf("?code>") + 1;
                 int end = all.IndexOf("</code>", start);
-                tempip = DateTime.Now + "   " + all.Substring(start, end - start);
+                tempip = DateTime.Now + "   " + all.Substring(start, end - start) + "      rocessMoitor processMonitor = new ProcessMoitor();";
                 Console.WriteLine(tempip);
                 sr.Close();
                 s.Close();
