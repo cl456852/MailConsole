@@ -119,6 +119,7 @@ namespace MasterSoft.WinUI
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return false;
             }
         }
