@@ -106,7 +106,7 @@ namespace MasterSoft.WinUI
             MailMessage mailMessage = new MailMessage(senderAddress, receiverAddess);
             mailMessage.Subject = subject;
             mailMessage.Body = body;
-
+            mailMessage.From = new MailAddress( "330998190@qq.com");
             SmtpClient smtpClient = new SmtpClient(smtpHost, smtpPort);
             //使用SSL加密连线
             smtpClient.EnableSsl=true;
@@ -117,6 +117,7 @@ namespace MasterSoft.WinUI
                 smtpClient.Send(mailMessage);
                 return true;
             }
+            
             catch (Exception ex)
             {
                 return false;
