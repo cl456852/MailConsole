@@ -32,7 +32,7 @@ namespace MailConsole
         void sendMail()
         {
             Mail mail = new Mail();
-            mail.ReceiverAddess = "cl4568521@gmail.com";
+            mail.ReceiverAddess = "330998190@qq.com";
             mail.Subject = "MyIP";
             mail.Body = (GetIP());
             try
@@ -65,7 +65,9 @@ namespace MailConsole
             string tempip = "";
             try
             {
-                WebRequest wr = WebRequest.Create("http://www.ip.cn");
+                HttpWebRequest wr = (HttpWebRequest)WebRequest.Create("http://www.ip.cn");
+                wr.Host = "www.ip.cn";
+                wr.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36";
                 Stream s = wr.GetResponse().GetResponseStream();
                 StreamReader sr = new StreamReader(s, Encoding.Default);
                 string all = sr.ReadToEnd(); //读取网站的数据
@@ -77,8 +79,9 @@ namespace MailConsole
                 sr.Close();
                 s.Close();
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e.Message);
             }
             return  tempip;
         }
