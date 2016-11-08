@@ -67,12 +67,13 @@ namespace MailConsole
             {
                 HttpWebRequest wr = (HttpWebRequest)WebRequest.Create("http://www.ip.cn");
                 wr.Host = "www.ip.cn";
+                wr.Proxy = null;
                 wr.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36";
                 Stream s = wr.GetResponse().GetResponseStream();
-                StreamReader sr = new StreamReader(s, Encoding.Default);
+                StreamReader sr = new StreamReader(s, Encoding.UTF8);
                 string all = sr.ReadToEnd(); //读取网站的数据
 
-                int start = all.IndexOf("?code>") + 1;
+                int start = all.IndexOf("<code>") + 1;
                 int end = all.IndexOf("</code>", start);
                 tempip = DateTime.Now + "   " + all.Substring(start, end - start) + "      rocessMoitor processMonitor = new ProcessMoitor();";
                 Console.WriteLine(tempip);
